@@ -1,0 +1,169 @@
+     #Core java
+=>Introduction
+=>Language fundamental
+=>Operators & Assignments
+=>Flow control
+=>Declaration and acess modifier 
+=>OOP's Concepts
+=>Exception Handling 
+=>Multithreading
+=>Collection
+***Interview preparations bonus lecture
+
+
+--Introduction--
+# What is a java?
+-Java is a programing language and it is a platform-independent.
+-The meaning of platform-independent is that the 
+java compiled code(byte code) can run on all operating systems.
+-Java is  class base , high level,more secure and pure object oriented
+ programing language.
+-JAva developed by sun microsystem in the year 1995.
+-James Gosling known father of java.
+
+**there are many devices where java is currently used =>
+   -Desktop applications like antivirus , media player
+   -Web Applications  like w3School.com , facebook.com.
+   -Enterprise applications like banking applications.
+   -Mobile Applications 
+   -Gaming
+   -Robotics etc...
+   
+   advanced java
+   frameworks=>
+   hibernate
+   spring (security module)
+   springboot,
+   microservices
+   
+ #what is class in java?
+ => A class is a group of objects , methods ,variables is nothing class.
+  It is a logical entity.It cant be a physical.
+    Student ,pen,pencil 
+	mobile,
+	Girl,
+	
+#What is an Object in java?
+=>  An object is an real world entity.Which has state and behaviour.
+    ex.pen,mobile , headphone etc
+	state - color(black ,white,red)
+	behaviour - write
+
+ex. Pen pen = new Pen(); 
+
+
+#What is a method in java?
+  => a method in java , is a like function which is used to expose the 
+     behaviour of an object.
+	    Advantages of method-
+		-code reusability
+		-code optimization
+		
+
+#What is a variables and its types?
+-variable is a memory location that can store the data.
+ ex. int x=20;
+	
+1)Local variable
+2)Instance variable
+3)Static variable
+
+1) Local variable/temp-
+    -we can decalre local variable Inside a any method or block
+	or constructor
+	store memory -  stack memory 
+	
+	ex.package practice;
+     public class Snehal1 {
+     public static void main(String []  args){
+	 int a = 20;
+	 int b = 30;
+	 int c = a+b;
+	 System.out.println(c);
+	 }
+     }
+	 
+2)Instance variable-
+    - we should decalre instance variable inside the class
+	but outside of any method or block or constructor.
+    Store memory- Heap memory
+    - Every object separate copy will be created.
+  
+	Ex.
+	package practice;
+
+	public class Test36 {
+    int x = 10; //instance variable
+	public static void main(String[] args) {		
+		Test36 test = new Test36(); 
+	     System.out.println(test.x);
+		}
+		}
+		
+
+
+3)Static variable-
+   -We should decalre static variable inside the class but outside of 
+   any method or block or constructor but using static keyword.
+   -store memory - non-heap memory/static memory.
+   ***How to Access=>
+   - We can access directly .
+   - Also we can access using class name.
+   - WE can access using object reference name.
+   
+    ex.
+	package practice;
+  public class Test36 {
+   
+    static int z = 25;
+	public static void main(String[] args) {		
+
+	Test36 test = new Test36();     //object  
+	
+	System.out.println(Test36.z); //accessing static variable using class name
+	System.out.println(test.z);  //accessing static variable using object refrence
+	System.out.println(z);		//accesssing static variable using directly
+	
+	}
+}
+
+
+ ***Data types in Java
+  -Data types specifies the different sizes and values that can stored in 
+	variable. There are two types of data types.
+1) primitive data types
+2) Non primitive
+
+1) Primitive data types=>
+    primitive data types included  two types this are-
+	integral  data types and floating data types.
+	
+	1)integral data types = 
+	   byte, short , int, long
+	  
+	2)floating data types = 
+	    float , double
+		
+	
+2)Non primitive data types=>
+  char, boolean
+	
+
+Data Type	  Size	          Range
+ byte	    1 byte		-128 to 127
+ short	    2 bytes	    -32,768 to 32,767
+ int      	4 bytes	 	-2,147,483,648 to 2,147,483,647
+ long	    8 bytes	 	-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+ float	    4 bytes	 	6 to 7 decimal digits
+ double	    8 bit	    14 to 15 decimal digit/decimal places accuracy
+ boolean	NA			Stores true or false values
+ char	    2 bytes	    Stores a single character/letter or ASCII values
+
+# control statement->
+---------------------
+1) if statement
+2) if elese statement
+3) if else if ladder
+4) nested if statement
+
+
