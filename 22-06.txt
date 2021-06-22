@@ -1,0 +1,109 @@
+last session: 
+=>variables and its types.
+=>Data types 
+=>Controll statement
+
+
+22-june
+
+1]Switch Statement->
+=====================
+-The Java switch statement executes one statement from multiple conditions.
+-If Serveral options are available then it is not recomended 
+   to go for nested if else.Beacouse it reduced redibility.
+   To handle this REquirement we should go for switch statement.
+-The Java switch expression must be of byte, short, int, long , enums and string.
+-Each case statement can have a break statement which is optional. 
+   When control reaches to the break statement, 
+   it jumps the control after the switch expression. 
+   If a break statement is not found, it executes the next case.
+-The case value can have a default label which is optional.
+ex.
+package core_java;
+
+public class SwitchExample {
+
+	public static void main(String[] args) {
+
+		int month = 2;
+		String monthString = "";
+		switch (month) {
+
+		case 1:
+			monthString = "1- january";
+			break;
+
+		case 4:
+			monthString = "4- Feb";
+			break;
+		case 3:
+			monthString = "3- March";
+			break;
+		default:
+			System.out.println("invalid month..!");
+
+		}
+		System.out.println(monthString);
+
+	}
+
+}
+
+
+2] while loop->
+=============
+-If We  dont know number of iterations in advanced,then we should go for while loop.
+-The  while loop is used to iterate a part of the program several times.
+-If the number of iteration is not fixed, it is recommended to use while loop.
+ 
+ Syntax:
+while(condition){  
+//code to be executed  
+} 
+
+ex.
+public class WhileLoopExample {
+	public static void main(String [] args) {
+		
+		int i = 0;
+		while(i<=10) {
+			System.out.println(i);
+			i++;
+		}
+	}
+
+}  
+
+3]do while->
+==========
+-The java do-while loop is used when  we want execute loop body at least once,Even
+  condition is false.
+
+-The Java do-while loop is executed at least once because condition is checked
+ after loop body.
+
+Syntax:
+do{  
+//code to be executed  
+}while(condition);
+
+ex.1)
+public class DoWhileExample {  
+public static void main(String[] args) {  
+    int i=1;  
+    do{  
+        System.out.println(i);  
+    i++;  
+    }while(i<=10);  
+}  
+}    
+
+
+ex.2)
+public class DoWhileExample2 {  
+public static void main(String[] args) {  
+    do{  
+        System.out.println("infinitive do while loop");  
+    }while(true);  
+}  
+}  
