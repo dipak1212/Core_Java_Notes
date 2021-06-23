@@ -1,0 +1,108 @@
+last session:
+=> switch
+=> while 
+=> do while
+
+23-june
+
+**switch example using scanner
+
+package core_java;
+
+import java.util.Scanner;
+
+public class SwitchExampleUsingScanner {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter month number");
+		int monthNumber;
+		monthNumber = sc.nextInt();
+		switch (monthNumber) {
+		case 1:
+			System.out.println("Jan");
+			break;
+			
+		case 2:
+			System.out.println("Feb");
+			break;
+
+		case 3:
+			System.out.println("March");
+			break;
+		default:
+			System.out.println("invalid month");
+			break;
+		}
+		}
+}
+
+**What is a scanner ?
+- Scanner class in Java is found in the java.util package. 
+    Java provides various ways to read input
+    from the keyboard(User), the java.util.Scanner class is one of them.
+ex.
+package core_java;
+
+import java.util.Scanner;
+
+public class ScannerExample {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("-----Enter Your Details------");
+		System.out.println("Enter your name : ");
+		String name = sc.next();
+		System.out.println("Enter your age : ");
+		int age = sc.nextInt();
+		System.out.println("enter your salary : ");
+		double salary = sc.nextDouble();		
+		System.out.println("------------Your Details-----------");
+		System.out.println("Name : " + name );
+		System.out.println("age : " + age);
+		System.out.println("salary : " + salary);
+	}
+
+}
+
+for loop ->
+========
+- For loop is mostly common loop in java.
+- IF we know number of iterations in advanced then for loop is the best choice.
+- If the number of iterations are fixed then we should go for for loop.
+
+Syntax:
+for(initialization;condition;incr/decr){  
+
+//statement or code to be executed  
+
+} 
+
+ex.
+1)
+Class ForLoopExample{
+public static void main(String [] args){
+for(i=1;i<=10;i++){
+sysout(i);
+}
+}
+} 
+
+2)
+public class ForLoopExample {
+	public static void main(String[] args) {
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+}
+
+output:
+*
+**
+***
+****
+*****
