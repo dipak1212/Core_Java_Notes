@@ -1,0 +1,145 @@
+last session: - Scanner 
+			  - For Loop 
+
+***Transfer Statement ->
+========================
+ 1) break-
+ ----------
+  -we can use break statement inside the switch to stop fall thrugh inside switch.
+     ex.
+	 public class BreakExample {
+
+	public static void main(String[] args) {
+		int x = 0;
+		switch (x) {
+		case 0:
+			System.out.println(0);
+
+		case 1:
+			System.out.println(1);
+			break;
+
+		default:
+			System.out.println("default..");
+		}
+	}
+}
+
+	2)continue -
+    ----------
+	-We can use continue statement inside loop to skip current iteration 
+	 and continue for next iteration.
+	 
+	 ex.
+	   package core_java;
+
+    public class ContinueExample {
+
+	public static void main(String[] args) {
+		for (int i = 0; i <= 10; i++) {
+			if (i % 2 == 0)
+				continue;
+			System.out.println(i);
+		}
+	}
+}
+
+
+***System.out.println();
+========================
+
+system- system is a class present in java.lang package.
+out   - out is a static variable present in system class of the type printstream.
+println - println is a method present in a printstream class.
+
+
+***Class Level Modifiers =>
+===========================
+-Whenever we are writing our own classes we have to provide some information to 
+ jvm,like whether this class can be accesible from anywhere or not.
+ Whether child class creation is  possible or not etc...
+-We can specify this information using modifiers.
+
+ex.
+  private class Dipak{
+  public static void main(String []  args)
+  {
+  sysout("Hello world")
+  }
+  }
+  
+  //Compile time error: modifier private not allowed here
+
+1)public classes->
+------------------
+	-If a class declared as public then we can access that class form anywhere.
+ex.
+      package dk.1;
+        public class A{
+		public void m1(){
+		sysout("I m from m1() method");
+		}
+		}		
+		
+		package dk.2
+		public class B{
+		psvm(s[]args){
+		A a = new A();  //object
+		a.m1();        //calling m1() method
+		}
+		}
+output: I m from m1() method
+ 
+ Note: If class A is not public then while comppiling B  class we will get 
+	compile time error saying package dk.1 is not public
+		 in package pack.1 can not be access form outside package.
+		 
+2)default classes->
+------------------		 
+		 If a class declared as default then we can access that class only 
+with in the current package. i.e. from outside package we can not access.
+Hence default access is also known as package level access modifier.
+   
+   ex.
+   
+   package pack dk;
+   default class X{
+   public void m1(){
+   sysout("Hello Im from m1");
+   }   
+   }
+   
+   package pack dk;
+   class Y {
+   psvm(s [] a){
+   X x = new X(); //creating X class object
+   x.m1();
+   }
+   }
+
+
+3)final Modifiers->
+ ------------------
+	-final is the modifier applicable for classes, methods and variables.
+	
+  *final method -
+    - If the parent class method is declared as final then we cant override that
+	  method in child class beacause its implementation is final.
+ ex.
+   public class Parent {
+   public void property(){
+   sysout("cash,Gold")
+   }
+   public final void marry(){
+   sysout("Rani");
+   }
+   }
+   
+   class Child extends Parent{
+   public void marry(){
+   sysout("Trisha");
+      }
+   }
+   
+   compile time error: marry in child can not override maryy in  parent ;
+                                                overriden method is final
