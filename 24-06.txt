@@ -1,6 +1,8 @@
 last session: - Scanner 
 			  - For Loop 
 
+24-june
+
 ***Transfer Statement ->
 ========================
  1) break-
