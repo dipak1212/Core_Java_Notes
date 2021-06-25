@@ -1,0 +1,111 @@
+last session:
+    -break
+	-continue statement
+	-class level modifieres
+	  1) public classes
+	  2)default classes
+	  3)final modifier
+	      -final method
+	   
+    25-June
+   --------
+  
+  -final class->
+  --------------
+  -If a class declare as a final then we cant extends functionalities of that class.
+  -i.e. we cant create child class for that class.
+  -It means inheritance is not possible for final classes.
+  
+  ex.
+   final class Parent {
+   m1(){
+   -----
+   }
+   
+   -
+   -
+   -
+   -
+   }
+   class Child extends Parent{
+   -
+   -
+   -
+   }
+   //c.e. : can not inherit from final Parent 
+   
+   
+   Note: 
+     - every method present inside final class is always final by default.
+	    But every variable present inside final class need not be final.
+		
+		ex.
+		   final class P{
+		   static int x = 10;
+		   psvm(s[] args){
+		   x = 20;
+		   sysout(x);
+		   		   }
+		   }
+		   // output : 20
+		   
+	- The main advantage of final keyword is we can achieve security and we can provid 
+	  unique implementation.
+	    But, the main disadvantage is of final keyword is we are missing key benifits of 
+		oops concepts.
+		 -inheritance(becouse of final classes)
+		 -polymorphism (becouse of final method)
+		      Hence if there  is no specific requirement then it is not recomended to use 
+			  final keyword.
+     
+	 
+	 **Abstract modifier=>			  
+	--------------------		  
+	-Abstract is a modifier applicable for classes, methods but not for variable.
+	
+	1) abstract methods-
+	---------------------
+	 -Even the we don't know about the implementation then  we can declare a 
+	   method with abstract modifier.
+	 - i.e. for abstract method only declaration is available but not implementation.
+	 -Hence abstract method declaration should end with ";" (semicolon).
+   ex. 
+		public abstract void m1();  //valid
+		public abstract void m1(){} //invalid
+		
+	- Child class responsible to provide implementation for parent class abstract method.
+	
+	ex. 
+	        abstract class  Vehicle {
+			abstract public int getNoOFWheels();
+	         }
+			 
+			 class Bus extends Vehicle{
+			 public int getNoOFWheels(){
+			 return 6;
+			 }
+			 }
+			 
+			 class Auto extends Vehicle{
+			 public int getNoOFWheels(){
+			 return 3;
+			  }
+			 }
+			 
+			 
+	2)Abstract class =>
+	====================
+	-For every java class if we dont want create an  object (becouse of
+	partial implementation)such type of classs we have  to declare with 
+	abstract modifier.
+	
+	ex.
+	 abstract class Test{
+	 p s v m(s [] a){
+	 Test t = new Test();	 //trying to create an object
+	 }
+	 }
+	 //c.e. : Test class is abstract; can not be initialized.
+	 
+	 
+	
