@@ -1,0 +1,186 @@
+ 
+ 27-june
+ 
+ ***Abstract class vs Abstract method =>
+	 =======================================
+	 1)If a class contain at least one abstract method then compulsory the 
+	   corresponding class should be declare with abstract modifier. 
+	   Because implementation is not complete and
+        hence we can’t create object of that class.
+		
+	2) Even though class doesn’t contain any abstract methods still we can 
+	  declare the class as abstract that is an abstract class can contain zero no
+	  of abstract methods also.
+	  
+	  ex.
+	  HttpServlet class is abstract but it doesn’t contain any abstract method.
+	  
+	  ex.
+	     class Dipak{
+		 public void m1();
+		 }
+		 	 //c.e. missing method body or declare abstract.			 
+				
+	ex.
+	class Parent
+    {
+    public abstract void methodOne(){}
+   }
+
+    //c.e.:  abstract methods cannot have a body
+
+
+**What is the difference between final and abstract?
+-----------------------------------------------------
+-For abstract methods compulsory we should override in the child class to provide
+ implementation. Whereas for final methods we can’t override hence abstract final
+ combination is illegal for methods.
+-For abstract classes we should compulsory create child class to provide implementation
+ whereas for final class we can’t create child class. Hence final abstract combination is
+ illegal for classes also.
+-Final class cannot contain abstract methods whereas abstract class can contain final
+method.
+ex.1
+  final class p {
+  abstract void m1();
+  }
+  //invalid
+  
+ ex.2
+  abstract class Parent{
+  public final void m1(){}
+  }
+  
+ //valid
+ 
+ 
+ ***Member Modifiers =>
+ ======================
+ 1) public members : 
+ -------------------
+    - If a member declared as the public then we can access that member 
+	from anywhere “but the corresponding class must be visible(it should be public)” hence before 
+	checking member visibility we have to check class visibility.
+ 
+ex.
+  package pack1;
+   class A {
+   public void m1(){
+   sysout("A class method");
+   }
+   }
+   
+   package pack2;
+    class B {
+	psvm(s [] a){
+	A a = new A();
+	a.m1();             //c.e. : pack1.A is not public in pack1;
+	}                   can not be access from aoutside package
+	}
+	
+	Note -
+	------
+	    in the abouve example even the m1() method is public we cant access 
+  from outside package coz of corresponding  class A is not public.
+  ** i.e. If both class and method are public then only we can access the 
+  method from outside package. 
+	
+2) default  members:
+--------------------
+      -If member declare as default then we can accesss that  member only with in the
+	   current package.
+	  - i.e.from outside of the package we cannt access. Hence default access 
+	    is also known as package level access.
+ex.
+  package pack1;
+  default class A
+  {
+  void methodOne(){
+  System.out.println("methodOne is executed");
+  }}
+
+   package pack2;
+   import pack1.A;
+   class B
+   {
+   public static void main(String args[]){
+   A a=new A();
+   a.methodOne();
+   }}
+   
+   
+  3)Private members:
+- If a member declared as the private then we can access that member only with in the
+  current class.
+- Private methods are not visible in child classes where as abstract methods should be
+  visible in child classes to provide implementation hence private, abstract combination is
+  illegal for methods.
+  
+
+		
+  
+4)Protected members:
+- If a member declared as the protected then we can access that member within the
+  current package anywhere but outside package only in child classes.
+
+ex.
+package pack1;
+public class A
+{
+protected void methodOne(){
+System.out.println("methodOne is executed");
+}}
+
+package pack1;
+class B extends A
+{
+public static void main(String args[]){
+A a=new A();
+a.methodOne();
+B b=new B();
+b.methodOne();
+A a1=new B();
+a1.methodOne();
+}}
+
+output:
+methodOne is executed
+methodOne is executed
+methodOne is executed
+
+
+**final variables->
+-------------------
+  
+   final instance variable-
+    ------------------------
+  - If the instance variable declared as the final compulsory we should
+	perform initialization whether we are using or not otherwise we will get compile time error.
+ 
+ex. 1)
+class Test
+{
+int i;
+} 
+
+
+2)
+class Test
+{
+final int i;
+}
+
+//c.e. : variable i might not have been initialized
+
+
+
+ ***Synchronized=>
+ =================
+- Synchronized is the modifier applicable for methods and blocks but not for
+  variables and classes.
+- If a method or block declared with synchronized keyword then at a time 
+  only one thread is allow to execute that method or block on the given object.
+- The main advantage of synchronized keyword is we can resolve data inconsistency
+  problems, but the main disadvantage is it increases waiting time of the threads 
+  and effects performance of the system. Hence if there is no specific requirement
+  never recommended to use synchronized keyword.
