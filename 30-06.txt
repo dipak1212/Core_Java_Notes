@@ -1,0 +1,119 @@
+30-june
+
+
+
+**final variables->
+-------------------
+  
+   final instance variable-
+    ------------------------
+  - If the instance variable declared as the final compulsory we should
+	perform initialization whether we are using or not otherwise we will get compile time error.
+ 
+ex. 1)
+class Test
+{
+int i;
+} 
+
+
+2)
+class Test
+{
+final int i;
+}
+
+//c.e. : variable i might not have been initialized
+
+
+
+ ***Synchronized=>
+ =================
+- Synchronized is the modifier applicable for methods and blocks but not for
+  variables and classes.
+- If a method or block declared with synchronized keyword then at a time 
+  only one thread is allow to execute that method or block on the given object.
+- The main advantage of synchronized keyword is we can resolve data inconsistency
+  problems, but the main disadvantage is it increases waiting time of the threads 
+  and effects performance of the system. Hence if there is no specific requirement
+  never recommended to use synchronized keyword.
+
+
+OOPs Concept=>
+============
+
+1)Data hiding -
+---------------
+   Outside person can't access our internal data directly or our internal 
+data should not go out directly. This oop feature nothing but data hiding.
+		After validation or identification outside person can access our internal 
+data.
+
+ex.1
+   After providing proper username and password we can able to access our 
+   gmail inbox.
+
+  2)Even the we are valid customer of the bank we can able to access our account
+    information and we can't access others account information.
+
+By declaring data members(variables) as private we can achiev data hiding.
+
+-The main advantage of data hiding is security.
+
+NOTE-
+    It is highly recomended to declare data members as private.
+	
+	
+	2)Abstraction->
+	--------------
+	
+	    -Hiding internal implementation and just highlight the set of services what we
+	want is concept is called as abstraction.
+	
+	ex.
+	   1) Through the ATM GUI screen bank people are highlighting the set of services.
+	   what they are offering without highlighting internal implementation.
+	   
+	   The main advantages of abstraction are-
+	   
+	   1) Security.(coz of we are not highlight our internal implementation).
+	   2) without effecting outside person we can able to perform any type of changes in 
+	      our internal system and hence enhancement will become easy.
+	   3) It improves maintainability of the application.
+	   4) It improves the easyness to use our system.
+	 
+ex.
+  abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzzzzzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Cat extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The cat says: meoww meoww");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Cat myCat = new Cat(); // Create a Cat object
+    myCat.animalSound();
+    myCat.sleep();
+  }
+}	 
+	   
+
+
+3)Encapsulation->
+-----------------
+    The process of binding data and corresponding method into a single unit 
+is nothing but encapsulation.	
+	
+	
+	
