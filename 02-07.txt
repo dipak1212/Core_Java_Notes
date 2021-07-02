@@ -1,0 +1,78 @@
+02-july
+
+3)Encapsulation->
+-----------------
+    The process of binding data and corresponding method into a single unit 
+is nothing but encapsulation.	
+
+ex. every java class is the example of encapsulation.
+
+The main advantage of encapsulation are-
+----------------------------------------
+1) We can achiev secuirity.
+2) Enhancment will become easy.
+3) It improves maintainability of the application.
+      The  main advantage of encapsulation is we can achieve secuirity but the
+the main disadvantage of encapsulation is it increase length of the code 
+and slow down execution.
+
+***Which of the following classes are tightly encapsulated?
+-----------------------------------------------------------
+
+class A {
+private int x = 10;
+}
+
+class B extends A{
+int y=20;
+}
+
+class C extends A {
+private int z = 30;
+}
+	
+***Which of the following classes are tightly encapsulated?
+-----------------------------------------------------------
+
+class Parent{
+ int x = 10;
+}
+
+class Child extends Parent{
+private int y = 30;
+}
+
+class Chil1 extends Parent{
+private int z = 40;
+}
+
+Note-
+-----
+    If the parent class is not tightly encapsulated then no child class is tightly 
+encapsulated.
+
+
+
+4)Inheritance->
+---------------
+    Inheritance means one class can extends to another class. So that the code can 
+be reused from one class to another  class.
+ 
+ -The main advantage of inheritance is code reusability.
+ -By using extends keywords we can implement inheritance concept.
+ 
+ex.
+  Class Animal {
+  public void eat(){
+  sopln("I m eating");
+  }
+  }
+  
+  class Dog extends Animal{
+  psvm(s[]args){
+  Dog dog = new Dog();
+  dog.eat();
+  }  
+  }
+  
+  
