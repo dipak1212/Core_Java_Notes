@@ -1,0 +1,130 @@
+03 july
+
+
+ 5)Polymorphism ->
+ ================
+ 
+ If one task performing in different ways is known as polymorphism.
+    ex. Water- solid , liquid, gas
+	    Shape- Circle, Triangel etc.
+		
+		There are two types in polymorphism.
+		
+		
+      a) Method overloading(compile time polymorphism)-
+      -----------------------------------------------
+    Two methods are said to be overloaded if and only if both methods having same 
+    name and different arguments types.
+       ex.
+           m1(int i)
+		   m1(double d)
+		   
+	ex.
+	    Class Test{
+		public void m1(String s){
+		sopln("String Type arguments);
+		}
+		
+		public void m1(double d){
+		sopln("double type arguments");
+		}
+		
+		public static void main(string [] args){
+		Test test= new Test();
+		test.m1("dipak");
+		test.m1(230.00);
+		}
+		}
+Note-
+-----
+    In method overloading method resolution always takes care by compiler. Hence
+  method overloading also called as Compile time polymorphism.
+  
+  Automatic Pramotion in overloading->
+  -----------------------------------
+  While resolving overloaded method if exact match method is not available then 
+  we wont get any compile time error imidiately. First it will pramote arguments to 
+  next level and check whether matche method is available or not.
+          If matched method is available then it will executed fine and if 
+ exact match is not available then compiler promots arguments once again to the
+ next level.
+    This process will be continued untill all possible pramotions still if 
+ the matched method is not available then we will get compile time error.
+ 
+The following are all possible pramotions in overloading-
+
+byte --> short --> int --> long --> float --> double
+		   char-->
+		   
+		This process is called automatic pramotions  in method overloading.
+		
+ex.
+   package core_java;
+
+public class Test1 {
+
+	public void m1(String s) {
+		System.out.println("I m from String type argument");
+	}
+	
+	public void m1(double d) {
+		System.out.println("Im from double type argument");
+	}
+	
+	public void m1(int i) {
+		System.out.println(" Im from int type argument");
+	}
+	
+	public static void main(String[] args) {
+		Test1 test = new Test1();
+		/*byte b = 100;*/
+		test.m1(120.00);        //Im from double type argument
+		test.m1("vishal");     //I m from String type argument
+		test.m1('d');         //Im from int type argument
+//		test.m1(b);
+
+	}
+
+}
+
+
+Output:
+Im from double type argument
+I m from String type argument
+Im from int type argument
+
+
+ b) Method overriding=>
+=======================
+   Whatever method parent has by default available to child through inheritance.
+ If child class not satisfied with parent  class implementation then  child class 
+is allowed to redefined that method based on its requirement.
+  this process is called as method overriding.
+Both methods name and arguments should be same then  only we can say that methd 
+overriding.
+   
+ex.
+   class Parent {
+   public void property(){
+   sopln("cash + Cars + Home");
+   }
+   public void marry(){
+   sopln("Rani");
+   }   
+   }
+
+  class Child extends Parent{
+  public void marry(){
+  sopln("Angel Priya");
+  }
+  }  
+
+  class Test{
+  psvm(s[]args){
+  Parent parent = new Parent();
+  parent.marry()
+ 
+  Child child  = new Child();
+  child.marry();
+  }
+  }  
