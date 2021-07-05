@@ -1,0 +1,114 @@
+05-july
+
+
+ b) Method overriding(Runtime polymorphism)=>
+============================================
+   Whatever method parent has by default available to child through inheritance.
+ If child class not satisfied with parent  class implementation then  child class 
+is allowed to redefined that method based on its requirement.
+  this process is called as method overriding.
+Both methods name and arguments should be same then  only we can say that method 
+overriding.
+   
+ex.
+   class Parent {
+   public void property(){
+   sopln("cash + Cars + Home");
+   }
+   public void marry(){
+   sopln("Rani");
+   }   
+   }
+
+  class Child extends Parent{
+  public void marry(){
+  sopln("Angel Priya");
+  }
+  }  
+
+  class Test{
+  psvm(s[]args){
+  Parent parent = new Parent();
+  parent.marry()
+ 
+  Child child  = new Child();
+  child.marry();
+  }
+  }  
+  
+ Note 1) IN mrthod overriding method name and arguments type must be matched.
+      i.e. method signature must be same.
+   
+   2) Parent class private methods not available to the  child and hence overridinging
+   concept not applicable for private method.
+   
+   ex.
+     class Parent {
+	 private void m1()(){
+	 .....
+	 }
+	 }
+	 
+	 class Child extends Parent {
+	 private void m1(){
+	 ....
+	 }
+	 }
+	 //it is method hiding but not method overriding.
+	 
+	 3) We cant override parent class final method in child classes if we are trying 
+	  to override we will get c.e.
+	   ex.
+	     class Parent {
+		 public final void m1(){
+		 ....
+		 }
+		 }
+	        
+		class Child extends Parent{
+		public void m1(){
+		........
+		}
+		}
+		
+		c.e.
+		    m1() in c cant override m1() in p;
+			 override  method is final
+			 
+**Constructor =>
+=================
+  Once we creates an object comoulsory we should  perform an initialization then
+  only the object is in a position to respond properly.
+			Whenever we are creating an  object some peice of code will  be 
+  executed automatically to perform initialization of the object. These peice of
+  of code  is nothing  but  "Constructor".
+    Hence the main purpose of consturctor is to perform initialization of an object.
+	
+	ex.
+	class Student
+     {
+  
+    String name;
+    int rollNo; 
+   
+    Student(String name, int rollNo)
+    {
+        this.name = name;
+        this.rollNo = rollNo;
+    } 
+
+    public static void main (String[] args)
+    {
+        
+        Student student= new Student("Avi", 1);
+        Student student2 = new Student("Dipak",2);
+        System.out.println("Student Name :" + student.name +" and rollNo :" + student.rollNo);
+        System.out.println("Student Name :" + student2.name +" and rollNo :" + student2.rollNo);
+        
+    }
+    }
+	  
+Note- the main purpose of constructor is to be perform initialization of 
+an object , but not for create object.
+      
+	  
