@@ -1,0 +1,83 @@
+07-july
+
+**Constructor =>
+=================
+  Once we creates an object comoulsory we should  perform an initialization then
+  only the object is in a position to respond properly.
+			Whenever we are creating an  object some peice of code will  be 
+  executed automatically to perform initialization of the object. These peice of
+  of code  is nothing  but  "Constructor".
+    Hence the main purpose of consturctor is to perform initialization of an object.
+	But,not an create a object.
+	
+	ex.
+	package core_java;
+
+public class Student {
+
+	String name;
+	int rollNo;
+	
+	public Student(String name, int rollNo) {
+		
+		this.name=name;
+		this.rollNo=rollNo;
+	}
+	
+	public static void main(String[] args) {
+		
+		Student student1 = new Student("Dipak", 11);
+		Student student2 = new Student("Ganesh", 22);
+		System.out.println("Student Name : " + student1.name + " Roll NO : " + student1.rollNo);
+		System.out.println("Student Name : " + student2.name + " Roll NO : " + student2.rollNo);
+
+	}
+
+}
+
+	  
+Note- the main purpose of constructor is to be perform initialization of 
+an object , but not for create object.
+
+Rules of writing constructor->
+-----------------------------
+ -  Name of the class and name of the constructor must be matched.
+ - 	Return type concept not applicable for constructor even void also.
+ -  By mistake if we are trying to declare return type for the  constructor
+    then we wont get any compile time error becouse compiler treats it is a method,
+	but not for constructor.
+	ex.
+	  class Test{
+	  void Test(){
+	  
+	  }
+	  }
+      //it is a method but not constructor.
+	  
+	  Hence it is ligel but stupid to have a method whose name is exactly same as 
+	  class name.
+	    ex.
+		 class Test {
+		 void Test(){
+		 sopln("it is a method but not constructor");
+		 }
+		 psvm(s[]a){
+		 Test test = new Test();
+		 test.Test(); //it is a method but not constructor
+		 }
+		 }
+
+	- The only applicable modifier for constructor are public , private , protected
+	,default. If We are trying to use anyother modifier we will get c.e.
+	
+	*default Constructor->
+	----------------------
+	1)compiler is responsible for generate  default constructor.
+	2)If we are not writing any constructor then only compiler will generate default
+	  constructor. i.e. if we are writing atleast one constructor then
+	  compiler wont generate default constructor.
+	  
+	  
+	  
+	  **Exception Handling=>
+	  ======================
