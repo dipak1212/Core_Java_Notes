@@ -1,0 +1,115 @@
+08-july
+
+**Constructor overloading->
+	  -----------------------------
+	  -For constructor inheritance and overriding is not applicable, but
+	   overloading  is applicable.
+	   
+	  -With in a class we can declare multiple constructor and  all these 
+	  constructor having same name but diff type of arguments. Hence all these
+	  constructor are consider as overloaded constructor.
+	  ex.
+	    class Test {
+		Test(){
+		this();
+		sopln("no-arg");
+		}
+		
+		Test(int i){
+		this(10);
+		sopln("int-arg");
+		}
+		
+		Test(double d){
+		this(10.5);
+		sopln("double-arg");
+		}
+		psvm(s[]a){
+		Test test = new Test();
+		
+		Test test1 = new Test(10);
+	
+		Test test2 = new Test(10.5);	
+		
+		}
+		}
+	  
+	  
+	  **Exception Handling=>
+	  ======================
+	  #Introduction->
+	  --------------
+		- An unwanted unexpected event that disturbs normal flow of the
+	program is called exception.
+	
+	Ex.
+     SleepingException
+     TyrePunchuredException
+     FileNotFoundException…..etc
+ - It is highly recommended to handle exceptions. The main objective of exception
+   handling is graceful (normal) termination of the program.
+   What is the meaning of exception handling?
+ - Exception handling doesn’t mean repairing an exception. We have to define 
+   alternative way to continue rest of the program normally this way of defining 
+   alternative is nothing but exception handling.
+   
+   Ex.
+     Suppose our programming requirement is to read data from London file at 
+   runtime if London file is not available our program should not be terminated 
+   abnormally. We have to provide a local file to continue rest of the program 
+   normally. This way of defining alternative is nothing but exception handling.
+   
+   ex.
+   try
+   {
+   read data from london file    //risky code
+   }
+	catch(FileNotFoundException e)
+	{
+	use local file and continue rest of the program normally   //handling code
+	}
+	}
+	
+	ex.
+	
+	package core_java;
+
+public class Exception1 {
+public static void main(String [] argrs) {
+	try {
+		System.out.println(10/0);//custom exception
+	}
+	catch(Exception e){
+		System.out.println(10/2);
+	}
+	
+	System.out.println("Hello Snehal");
+	
+}
+}
+
+	
+**Runtime stack mechanism->
+--------------------------- 
+For every thread JVM will create a separate stack all method calls
+performed by the thread will be stored in that stack. Each entry in the 
+stack is called “one activation record” or “stack frame”. After completing 
+every method call JVM removes the corresponding entry from the stack. 
+After completing all method calls JVM destroys the empty stack and terminates
+ the program normally.
+
+ex.
+Example:
+class Test
+{
+public static void main(String[] args){
+doStuff();
+}
+public static void doStuff(){
+doMoreStuff();
+}
+public static void doMoreStuff(){
+System.out.println("Hello");
+}}
+Output:
+Hello
