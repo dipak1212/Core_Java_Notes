@@ -1,0 +1,52 @@
+	
+**Runtime stack mechanism->
+--------------------------- 
+For every thread JVM will create a separate stack all method calls
+performed by the thread will be stored in that stack. Each entry in the 
+stack is called “one activation record” or “stack frame”. After completing 
+every method call JVM removes the corresponding entry from the stack. 
+After completing all method calls JVM destroys the empty stack and terminates
+the program normally.
+
+ex.
+Example:
+class Test
+{
+public static void main(String[] args){
+doStuff();
+}
+public static void doStuff(){
+doMoreStuff();
+}
+public static void doMoreStuff(){
+System.out.println("Hello");
+}}
+Output:
+Hello
+
+
+***Checked Vs Unchecked Exceptions:
+- The exceptions which are checked by the compiler for smooth execution of the program
+at runtime are called checked exceptions.
+1) HallTicketMissingException
+2) PenNotWorkingException
+3) FileNotFoundException
+- The exceptions which are not checked by the compiler are called unchecked exceptions.
+1) BombBlaustException
+2) ArithmeticException
+3) NullPointerException
+Note: RuntimeException and its child classes, Error and its child classes are unchecked and all
+the remaining are considered as checked exceptions.
+Note: Whether exception is checked or unchecked compulsory it should occur at runtime only
+there is no chance of occurring any exception at compile time
+
+***Partially checked Vs fully checked:
+-------------------------------------
+- A checked exception is said to be fully checked if and only if all its child classes are also
+checked.
+Example:
+1) IOException
+2) InterruptedException
+- A checked exception is said to be partially checked if and only if some of its child classes
+are unchecked.
+Example: Exception
