@@ -1,0 +1,47 @@
+
+- The only partially checked exceptions available in java are:
+1. Throwable.
+2. Exception.
+Which of the following are checked?
+1. RuntimeException-----unchecked
+2. Error-----unchecked
+3. IOException-----fully checked
+4. Exception-----partially checked
+5. InterruptedException-----fully checked
+6. Throwable------partially checked
+
+***Exception hirarchy->
+-----------------------
+   -Throwable class acts as a root for java exceptions hirarchy.Throwable class 
+    defines two child classes.
+   1)Exception
+   2)Error 
+   
+   1)Exception-
+   -----------
+      MOst of the time exception are coused by our program and these are recoverable.
+	  ex.
+	    if our pgm  a requirement is to read data from remote is to read data 
+		from London file at runtime if London file is not available then we will
+		get runtime exception saying FileNotFoundException.
+		    If FileNotFoundException occures we can provide local file and 
+	 continue rest of the program normally.
+	 ex.
+	   try{
+	   read data from remote file 
+	   locating at london
+	   }
+	   catch(FileNotFoundException e){
+	   use local file and continue
+	   rest of program normally
+	   }
+	   
+	   2)Error-
+	   --------
+	   MOst of the time errors are not coused by our program and these
+	   are due to lack of system resources.Error are non recoverable.
+	   for ex. 
+	       If outofMemory error occurs being a programmer we cannt do anything and
+	program will be terminate abnormally. System admin or server admin 
+	is responsible to increase heap memory.
+	 
