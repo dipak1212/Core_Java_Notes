@@ -1,0 +1,37 @@
+12-july
+-------
+
+1)final-
+--------
+  final is the modifier for classes, methods and varibles.
+      If class declare as final  then we cannt extends that class i.e we cant create 
+	child class for that class inheritance not possible for final class.
+	If method is final then we cant override that method  in the child class.
+	
+2)finally-
+---------
+   - Finally is a block always associated with try-catch to maintain cleanup code.
+   - Finally block is responsible for perform cleanup activities related to try catch
+      block i.e. whatever resources we open that part of try block we will be closed
+	  inside finaly block
+   ex.
+   try{
+   risk code
+   }
+   catch{
+   handling code
+   }
+   finaly{
+   cleanup code
+   }
+   
+   - The speciality of finaly block is it will be  excuted always respective of 
+   whatever exception is raised or not and handle or not.
+   
+ 3)finilize()-
+ -----------
+    - finilize is method always invoked by garbage collector just befor destroying object
+	  to perform an cleanup activities.
+	- Once finilize method complete  imidiately garbage collector destroy 
+		   that method
+ 
