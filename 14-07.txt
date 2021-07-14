@@ -1,0 +1,116 @@
+14-july
+-------
+
+#Control flow in try catch->
+----------------------------
+
+try{
+statement 1;
+statement 2;
+statement 3;
+}
+
+catch(exceptioin e){
+statement 4;
+}
+statement 5;
+
+case 1:
+-------
+    If there is no exceptioin then  1,2,3,5 will be execute and it is normal 
+termination.
+  becouse catch block wont execute coz there is no exceptioin raised.
+  
+case 2:
+-------
+     If an exceptioin raised at statement 2 and corresponding catch block 
+	 matched then 1,4,5.
+	 
+case 3:
+-------
+      if exceptioin reaised at statemt 2 and corresponding catch block not
+	  matched then 1 will be execute and it is abnormal termination.
+	  
+case 4:
+-------
+      if an exceptioin raised at statement 4 or statement 5 then  it is abnormal
+	  termination.
+	  
+	  
+	  **Various possible combination of try-catch-finally-
+	  ----------------------------------------------------
+	  ex.
+	  
+	  1)
+	  try{
+	  
+	  }
+	  catch(exceptioin e){
+	  
+	  }
+	  //Valid
+	  
+	  2) try{
+	  }
+	  catch(x e){
+	  }
+	  catch(e e){
+	  }
+	  //valid
+	  
+	  
+	  
+	  
+	  3)
+	  try{
+	  }
+	  finally{
+	  
+	  }//valid
+	  
+	  4)try{
+	  }
+	  catch(ex e){
+	  }
+	  catch(ex e){
+	  }
+	  //c.e. exceptioin ex  has already been cought
+	  
+	  
+	  
+	  
+	  5)
+	  try{
+	  }
+	  catch(ex e){
+	  }
+	  finally{
+	  }
+     //valid	  
+	  
+	  
+	  
+	  6)
+	  try{
+	  }
+	  catch{
+	  try{
+	  }
+	  catch{
+	  }
+	  }
+	  //valid
+	  
+	  
+	  7)
+	  try{
+	  }
+	  catch{
+	  }
+	  try{
+	  }
+	  finally{
+	  }
+	  //valid
+	  
+	
