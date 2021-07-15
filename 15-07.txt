@@ -1,0 +1,38 @@
+15-july
+--------
+
+##Throw keyword-
+----------------
+  -Sometimes we can create exception  object explicitly and we can handover to the 
+	jvm manually for this we have to use throw keyword.
+	
+	ex.
+	  throw new AE : "/by zero"
+	  
+	-Hence the main objective of throw keyword is to handover our created exception
+	object to the jvm manually.
+	
+	
+	ex.
+	class Test{
+	psvm(s[]a){
+	syout(10/0); //Arithmatic Exception
+	}
+	}
+	//in this case main() method is responsible to create an exception object
+	and handover to the jvm
+	
+	
+	2)
+	class Test1{
+	psvm(s[]a){
+	throw new AE("/by zero");
+	}
+	}
+	//in this  case programmer is responsible for to create an exception object
+	and handover to the jvm.
+	
+	
+	Note: Best use of throw keyword is for user defined exception or custumized 
+	exception.
+	
