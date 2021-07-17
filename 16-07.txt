@@ -1,0 +1,88 @@
+16-july
+-------
+case 1:
+-------
+throw e - if e referce null then we will get null pointer exception.
+ex.1)
+
+   package core_java;
+
+   public class Test2 {
+
+	static ArithmeticException e;
+	public static void main(String[] args) {
+		throw e;
+	}
+}
+//R.E.NullPointerException
+
+2)
+ package core_java;
+
+   public class Test2 {
+
+	static ArithmeticException e= new  ArithmeticException();
+	public static void main(String[] args) {
+		throw e;
+
+	}
+}
+
+case 2:
+-------
+  -After the throw statement we are not allowed to write any statement directly.
+  Otherwise we will get compile time error saying unreachable statement.
+  ex.
+  1)
+  class Test {
+  psvm(s[]a){
+  sopln(10/0);
+  sopln("Hello");
+  }
+  }
+//R.E. A.E./by zero
+
+2)class Test2{
+psvm(s[]args){
+throw new AE("/by zero");
+sopln("helllo");
+}
+}
+//c.e. unreachable statement
+
+case 3:
+-------
+ -We can use throw keyword only for throwable types.If we are trying to use for 
+ normal java object we will get c.e.saying incompatable types.
+ ex.
+ 1)
+ class Test3{
+ psvm(s[]args){
+ throw new Test3();//c.e. incompatable types found: test 
+										 required : java.lang.throwable
+ }
+ }
+ 
+ 2)
+ class Test4 extends RuntimeException{
+ psvm(s[]args){
+ throw new Test4();
+ }
+ } //R.E.Exception in thread "main" test at Test.main()
+ 
+ 
+ ##Throws keyword-
+ -----------------
+  -In our program if there is posibility of reaising checked exception then compulsory we
+   should handle that checked exception otherwise we will get c.e. saying unsuported 
+   exception XXX; must be cought  or declared to be thrown.
+     ex.
+	  class Test{
+	  psvm (s[]a){
+	  printwriter pw = new printwriter("dips.txt");
+	  pw.println("Hello");
+	  }
+	  }
+	  //c.e.
+  
+  
