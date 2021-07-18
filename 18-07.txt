@@ -1,0 +1,62 @@
+
+ ##throws keyword-
+ -----------------
+  -In our program if there is posibility of reaising checked exception then compulsory we
+   should handle that checked exception otherwise we will get c.e. saying unsuported 
+   exception XXX; must be cought  or declared to be thrown.
+     ex.
+	  class Test{
+	  psvm (s[]a){
+	  printwriter pw = new printwriter("dips.txt");
+	  pw.println("Hello");
+	  }
+	  }
+	  //c.e. unreported exception java.lang.Interupted exception:
+			must be cought or declared as throws
+			
+	2)
+	class Test {
+	psv(s[]args){
+	thread.sleep(10000);
+	}
+	}
+   //c.e.  unreported exception java.lang.Interupted exception;
+			must be cought  or declared to be thrown.
+			
+  -We can handle this compile time error by using the following two ways...
+  1st way - by using try catch block->
+  ------------------------------------
+   package core_java;
+
+public class ABCD {
+
+	public static void main(String[] args) {
+		try {
+			Thread.sleep(10000);
+			System.out.println("Hello All...");
+		} catch (InterruptedException e) {
+			
+		}
+	}
+
+}
+  
+  2nd way - by using throws keyword-
+  ----------------------------------
+  we can use throws keyword to delegate responsibilities of exception handling  to 
+  the caller.It may be another methor or JVM.Then caller method is responsible for handle that
+  exception.
+  
+  ex.
+  1)
+  package core_java;
+
+   public class ThrowsExample {
+
+	public static void main(String[] args) throws InterruptedException {
+		Thread.sleep(10000);
+		System.out.println("main method responsible to handle that exception...");
+	}
+
+   }
+   
