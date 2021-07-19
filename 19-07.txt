@@ -1,0 +1,105 @@
+-“throws” keyword required only checked exceptions. Usage of throws for unchecked
+ exception there is no use.
+- “throws” keyword required only to convenes complier. Usage of throws keyword
+ doesn’t prevent abnormal termination of the program.
+  
+  ex.
+ class Test
+ {
+ public static void main(String[] args)throws InterruptedException{
+ doStuff();
+ }
+ public static void doStuff()throws InterruptedException{
+ doMoreStuff();
+ }
+ public static void doMoreStuff()throws InterruptedException{
+  Thread.sleep(5000);
+ }
+ }
+ 
+ //In the above program if we are removing at least one throws keyword 
+ then the program won’t compile
+ 
+ Case 1: we can use throws keyword only for Throwable types otherwise we
+        will get compile time error saying incompatible types.
+		ex.
+		   class Test3{
+            public static void main(String[] args)throws
+			Test3
+			{}
+			}
+	    	//c.e.
+			Test3: incompatible types
+			found : Test3
+			required: java.lang.Throwable
+			
+
+			
+			ex.
+			2)
+			class Test3 extends RuntimeException{
+			public static void main(String[] args)throws
+			Test3
+			{}
+			}
+	
+      Case 2:
+     Ex.
+     class Test3{
+     public static void main(String[] args){
+    throw new Exception();
+    }
+    }
+	c.e.
+    Test3.java:3: unreported exception
+    java.lang.Exception; must be caught or
+    declared to be thrown
+	
+	Ex.
+	2)
+	class Test3{
+    public static void main(String[] args){
+    throw new Error();
+    }
+    }
+	//Runtime error
+    Exception in thread "main" java.lang.Error
+   
+   
+   #Exception Handling keywords summary->
+   --------------------------------------
+   1)try-
+   -to maintain risky code.
+   
+   2)catch-
+   -to maintain handling code.
+   
+   3)finally-
+   -to maintain cleanup code.
+   
+   4)finilize()-
+   -to maintain cleanup code related to object. 
+   
+   5)throw-
+   -to handover our created exception object to the jvm manually.
+   
+   6)throws-
+   -to delegate responsibilities of exception handling to  caller(may be it is method
+     or jvm)
+	 
+	 assignment
+	 ----------
+	 1) write a program to print a pattern.
+	  
+	 *****
+	 *****
+	 *****
+	 *****
+	 *****
+	 
+	 2)
+	 11111
+	 22222
+	 33333
+	 44444
+	 55555
