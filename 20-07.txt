@@ -1,0 +1,68 @@
+
+20-july
+-------
+***Various possible compile time errors in exception handling:
+1) Exception XXX has already been caught.
+2) Unreported exception XXX must be caught or declared to be thrown.
+3) Exception XXX is never thrown in body of corresponding try statement.
+4) Try without catch or finally.
+5) Catch without try.
+6) Finally without try.
+7) Incompatible types.
+      Found:test
+      Requried:java.lang.Throwable;
+8) Unreachable statement.
+
+###Customized Exceptions (User defined Exceptions):
+   -Sometimes we can create our own exception to meet our programming requirements.
+    Such type of exceptions are called customized exceptions (user defined exceptions).
+  Ex.
+    1) InSufficientFundsException
+    2) TooYoungException
+    3) TooOldException
+	
+	ex.
+class TooYoungException extends RuntimeException
+{
+TooYoungException(String s)
+{
+super(s);
+}
+}
+
+class TooOldException extends RuntimeException
+{
+TooOldException(String s)
+{
+super(s);
+}
+}
+
+
+class CustException
+{
+public static void main(String[] args){
+int age=Integer.parseInt(args[0]);
+if(age>60)
+{
+throw new TooOldException("u r age already crossed....no chance of getting married");
+
+}
+else if(age<18)
+{
+
+throw new TooYoungException("please wait some more time.... u will get best match");
+}
+else
+{
+System.out.println("you will get match details soon by e-mail");
+}}}
+
+Note: It is highly recommended to maintain our customized exceptions as unchecked by
+extending RuntimeException.
+
+
+
+
+
+
