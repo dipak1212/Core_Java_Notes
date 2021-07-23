@@ -1,0 +1,98 @@
+22-july
+--------
+
+###Top-10 Exceptions:
+-Exceptions are divided into two types. They are:
+1) JVM Exceptions:
+2) Programatic exceptions:
+
+1)JVM exception-
+----------------
+-The exceptions which are raised automatically by jvm,
+  Whenever a particular events occurs are called jvm Exceptions.
+  ex.
+    ArithmeticException, 
+	NullPointerException etc,
+	
+2)Programatic Exceptions-
+-------------------------
+-The exceptions which  are raised explicitly either by programmer or by API 
+ developer it is called as programatic exceptions.
+ ex.
+   TooOldException,
+   IlligalArgumentException
+   
+  1)ArrayIndexOutOfBoundException-
+  ---------------------------------
+  -It is a child class of RuntimeException and hence it is unchecked.
+  -Raised automatically by jvm whenever we are trying to access array element with
+   out of range index.
+  ex.
+   int[] x = new int[5];
+   sopln(x[0]);
+   sopln(x[6]);  //r.e. ArrayIndexOutOfBoundException
+   sopln(x[-10]);  //r.e. ArrayIndexOutOfBoundException
+   
+   
+   2) NullPointerException-
+   -------------------------
+   -It is the child class of RuntimeException and hence it is unchecked.
+   -Raised automatically by jvm whenever we are trying to perform any operation on
+    null.
+	ex.
+	  String s = null;
+	  sopln(s.length()); //nullPointerException
+	  
+	  
+  3)ClassCastException-
+  ---------------------
+  -It is the child class of RuntimeException and hence it is the unchecked .
+  -Raised automatically by jvm whenever we are trying to typecast parent to child 
+  type.
+  ex.
+   1)
+    Object obj = new Object();
+	String s = (String)obj;  //ClassCastException
+	
+	2)
+	String s = new String("dipak");
+	Object 0 =(Object)s;    //valid
+	
+	
+	4)StackOverflowError-
+	---------------------
+	-It is a child class of Error and hence it is unchecked.
+	-Raised automatically by jvm whenever we are trying  to 
+	 perform any recursive operation or method call.
+	 ex.
+	 class Test{
+	 psvm(s[]a){
+		m1();
+	    }		
+		p s v m1(){
+		m2();
+		}
+		p s v m2(){
+		m1();
+		}
+		
+		}
+	 
+    5)NoClassDefFoundError-
+	-----------------------
+	-It is the child class of Error and hence it is unchecked.
+	-Raised automatically by jvm whenever jvm unable to find required .class file
+	 ex.
+	   javac Test.java
+	   Test.class
+	   -if Test.class file not available then we will get r.e.
+	   saying NoClassDefFoundError:Test
+	
+	
+   
+  
+   
+   
+  
+   
+ 
