@@ -1,0 +1,79 @@
+23-July
+-------
+
+6)ExceptionInitializerError-
+----------------------------
+-It is the child class of Error and hence it is uncheched.
+-Raised automatically by jvm,If any exception  raised while executing static
+ variable assignment and static block.
+ ex.
+ 1)
+   class Test{
+   static int x=10/0; //arithmeticException
+   }
+   
+   // java.lang.ExceptionInInitializerError
+ 
+  2)
+  package ExceptionHandling;
+
+   public class Example2 {
+	public static void main(String[] args) {
+		
+	}
+   static {
+	String s = null;
+	System.out.println(s.length());
+   }
+	
+   }
+   
+   
+   7)IlligalArgumentException-
+   ----------------------------
+   -It is the child class of  RuntimeEception and hence it is the uncheched.
+   -Raised explicitly either by programmer or by API developer to indicate that 
+    a method has been invoked with illigal arguments.
+	ex.
+	The valid range of thread priority is 1 to 10.If we are trying to set the
+	 priority with any other value then we will get R.E.saying IlligalArgumentException.
+	 
+	 Thread t1 = new Thread();
+	 t1.setPriority(15);    //IlligalArgumentException
+	 t1.setPriority(7);
+	 
+   8)NumberFormatException-
+   ------------------------
+   -It is the chid class of IlligalArgumentException which is the child class of 
+    runtimeException and hence it is the uncheched.
+   -Raised explicitly either by programmer or api developer to indicate that we are 
+    trying to convert string to number and string is not properly formated.
+	ex.
+	int i = Integer.parseInt("ten");   //NumberFormatException
+	int i = Integer.parseInt(10);
+	
+	ex. of parse one data type to onother data type-
+	
+	package core_java;
+
+    public class Example3 {
+
+    public static void main(String[] args) { 
+    	String s= "200";    
+         int a = Integer.parseInt(s);   
+        System.out.println(s);     
+    }    
+     }  
+	
+	
+	   
+	
+
+
+
+
+
+
+
+
+
