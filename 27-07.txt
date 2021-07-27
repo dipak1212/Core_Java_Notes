@@ -1,0 +1,99 @@
+27-July
+
+                           ##MultiThreading###
+							--------------------
+Agenda
+1) Introduction.
+2) The ways to define instantiate and start a new Thread.
+3) Getting and setting name of a Thread.
+4) Thread priorities.
+5) The methods to prevent(stop) Thread execution.
+1. yield()
+2. join()
+3. sleep()
+6) Synchronization.
+7) Inter Thread communication.
+8) Deadlock
+9) Daemon Threads
+
+
+
+1)Introduction
+--------------
+
+ Multitasking-
+-------------- 
+Executing several tasks simultaneously is the concept of multitasking. There are
+two types of multitasking.
+1) Process based multitasking.
+2) Thread based multitasking.
+
+
+##Process based multitasking-
+---------------------------
+-Executing several tasks simultaneously where each task is a
+ separate independent process such type of multitasking is called process 
+ based multitasking.
+ Example:
+-While typing a java program in the editor we can able to listen mp3 audio songs at
+ the  same time we can download a file from the net all these tasks are independent
+ of each other and executing simultaneously and hence it is Process based 
+ multitasking.
+-This type of multitasking is best suitable at “os level”.
+
+##Thread based multitasking-
+----------------------------
+- Executing several tasks simultaneously where each task is a
+ separate independent part of the same program, is called Thread based multitasking.
+ And each independent part is called a “Thread”.
+- This type of multitasking is best suitable for “programatic level”.
+- When compared with “C++”, developing multithreading examples is very easy in java
+  because java provides in built support for multithreading through a rich API
+  (Thread, Runnable, ThreadGroup, ThreadLocal….etc).
+- In multithreading on 10% of the work the programmer is required to do and 90% of 
+  the work will be down by java API.
+- The main important application areas of multithreading are:
+1) To implement multimedia graphics.
+2) To develop animations.
+3) To develop video games etc.
+- Whether it is process based or Thread based the main objective of multitasking is 
+ to improve performance of the system by reducing response time.
+
+2)The ways to define instantiate and start a new Thread:-
+--------------------------------------------------------
+
+- We can define a Thread in the following 2 ways.
+1. By extending Thread class.
+2. By implementing Runnable interface
+
+1)Defining a Thread by extending “Thread class”:
+ ex.
+ class MyThread extends Thread{
+ public void run(){
+ for(int i=0;i<=5;i++){
+ sysout("child Thread");
+ }
+ }
+ }
+
+class ThreadDemo
+{
+public static void main(String[] args)
+{
+MyThread t=new MyThread();//Instantiation of a Thread
+t.start();//starting of a Thread
+for(int i=0;i<5;i++)
+{
+System.out.println("main thread");
+}
+}
+}
+
+
+##Case 1: Thread Scheduler:
+-----------------------------
+-If multiple Threads are waiting to execute then which Thread will execute 1st is
+ decided by “Thread Scheduler” which is part of JVM.
+-Which algorithm or behavior followed by Thread Scheduler we can’t expect exactly 
+ it is the JVM vendor dependent hence in multithreading examples we can’t expect
+ exact execution order and exact output.
