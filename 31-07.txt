@@ -1,0 +1,85 @@
+31-july
+-------
+
+##life cycle of the Thread:-
+-----------------------------
+-Once we created a Thread object then the Thread is said to be in new state
+ or born state.
+-Once we call start() method then the Thread will be entered into Ready or Runnable
+ state.
+-If Thread Scheduler allocates process then the Thread will be entered into running state.
+-Once run() method completes then the Thread will entered into dead state.
+
+Note-
+------
+After starting a Thread we are not allowed to restart the same Thread once again
+otherwise we will get runtime exception saying “IllegalThreadStateException”.
+
+Example:
+MyThread t=new MyThread();
+t.start();//valid
+;;;;;;;;
+t.start();  //we will get R.E saying: IllegalThreadStateException
+
+
+##Thread Priorities:-
+---------------------
+- Every Thread in java has some priority it may be default priority generated
+ by JVM (or) explicitly provided by the programmer.
+- The valid range of Thread priorities is 1 to 10[but not 0 to 10] where 1 is 
+  the least priority and 10 is highest priority.
+- Thread class defines the following constants to represent some standard priorities.
+1) Thread. MIN_PRIORITY----------1
+2) Thread. MAX_PRIORITY----------10
+3) Thread. NORM_PRIORITY--------5
+- There are no constants like Thread.LOW_PRIORITY, Thread.HIGH_PRIORITY
+- Thread scheduler uses these priorities while allocating CPU.
+- The Thread which is having highest priority will get chance for 1st execution.
+- If 2 Threads having the same priority then we can’t expect exact execution order it
+  depends on Thread scheduler.
+  We can get and set the priority of a Thread by using the following methods.
+1) public final int getPriority()
+2) public final void setPriority(int newPriority);//the allowed values are 1 to 10
+- The allowed values are 1 to 10 otherwise we will get runtime exception saying
+“IllegalArgumentException”.
+
+##Default priority:-
+--------------------
+- The default priority only for the main Thread is 5. But for all the remaining
+  Threads the default priority will be inheriting from parent to child.
+  That is whatever the priority
+- parent has by default the same priority will be for the child also.
+
+Ex.
+class MyThread extends Thread
+{}
+class ThreadPriorityDemo
+{
+public static void main(String[] args)
+{
+System.out.println(Thread.currentThread().getPriority());//5
+Thread.currentThread().setPriority(9);
+MyThread t=new MyThread();
+System.out.println(t.getPriority());//9
+}
+}
+
+## The Methods to Prevent(Stop) a Thread from Execution:-
+----------------------------------------------------------
+We can prevent(stop) a Thread execution by using the following three methods.
+1) yield();
+2) join();
+3) sleep();
+
+1) yield():
+---------
+- yield() method causes “to pause current executing Thread for giving the
+ chance of remaining waiting Threads of same priority”.
+-  If all waiting Threads have the low priority or if there is no waiting
+ Threads then the same Thread will be continued its execution.
+- If several waiting Threads with same priority available then we can’t
+  expect exact which Thread will get chance for execution.
+- The Thread which is yielded when it get chance once again for execution 
+  is depends of the Thread scheduler.
+- public static native void yield();
+
