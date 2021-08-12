@@ -1,0 +1,46 @@
+11-Aug
+-------
+
+				##Collections
+				--------------
+-An array is an indexed collection of fixed no of homogenous(same data type)
+ data element.
+-The main advantage of array is we can represent multiple values by using
+ sigle variable. so that redability of the code will be improved.
+for ex.
+     class Testarray1{
+public static void main(String args[]){
+
+int a[]={33,3,4,5};
+
+//printing array
+for(int i=0;i<a.length;i++)
+System.out.println(a[i]);
+
+}}
+
+#Limitations  of an array-
+--------------------------
+-Array are fixed in sized. i.e. once we creates an array there is no chance to 
+ increasing or decreasing the size based on our requirement.
+-Due to this to use array concept compulsury we should know the  size of array in  
+advanced, which is not possible always.
+-Array can hold only homogenous data dype elements.
+
+-Overcome this limitations we should go for collection concept.
+
+1)collection can growable in nature. That is based on our requirement we can
+ increase or decrease the size.
+2)Collection can hold both homogenous and heterogenous data types.
+3)Every collection class is implemented based on some standard data structure.Hence
+  for ervery requirement readymade method support is available.
+  
+ ##Differnce between Array and Collections-
+ ------------------------------------------
+ 
+
+
+
+
+
+
