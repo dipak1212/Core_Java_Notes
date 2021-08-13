@@ -1,0 +1,55 @@
+13-Aug
+------
+
+# 9 keys interfaces of collections framework->
+------------------------------------------------
+1)Collection
+2)List
+3)Set
+4)SortedSet
+5)NavigableSet
+6)Queue
+7)Map
+8)SortedMap
+9)NavigableMap
+
+
+1] Collection(i)-
+-----------------
+-if we want to represent a gruop of individual object as a single entity then 
+ we should go for collection(i)
+-collection(i) is depends the most common methods which are applicable for any collection
+ object.
+-In general collection(i) is considered as the root(i) of the collection framework.
+
+#Diff bet collection and collections->
+---------------------------------------
+-collection is an interface.If we want to represent a gruop of individual object as a single entity then 
+ we should go for collection(i).
+ 
+-collections is an utility class present in java.util packge to define several 
+ utility methods for collection type(like sorting , searching etc..)
+ 
+ 2)List
+ -------
+ -List is the child interface for collection.
+ -If we want to represent a gruop of individual object as a single entity and where
+ duplicates are  allowed and insertion order must be preserved.Then we should go for  
+ list(i).
+ Note-
+ -in 1.2 v vetcor & stack classes are re-enginered or (modified) or (updated) to 
+ implement list(i).
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
