@@ -1,0 +1,22 @@
+16-Aug
+-------
+
+4)SortedSet(i)-
+----------------
+-It is the child interface of set.
+-If we want to represent a gruop of individual object as a single entity 
+where duplicates not allowed and all objects should be the  inserted according 
+to some sorting order then  we should go for sortedSet(i).
+
+5)Navigable set(i)-
+------------------
+-It is the child interface of sortedSet.
+-It contains several methods for navigation purpose.
+
+6)Queue-
+----------
+-It is  the child interface of collection.
+-If we want to represent a gruop of individual object some prior to processing
+then we should go for queue.
+-Usually queue follows "FIFO" order but , based on our rquirement we can implement
+ own priority also.
