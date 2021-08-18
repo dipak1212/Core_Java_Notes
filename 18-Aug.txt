@@ -1,0 +1,27 @@
+18-Aug
+------
+
+7)Map(i)-
+-------
+-Map is not child interface of collection.
+-IF we want too represent a gruop of objects as a key-value pair then we
+ should gor for map.
+-both key and value are objects only.
+-Duplicates key are not allowed,but value can be duplicated.
+
+8)SortedMap(i)-
+---------------
+-it is the child interface of map(i).
+-if we want represent a gruop of objects as a key-value pair according to some 
+ sorting order of keys then we should go for sortedMap(i).
+-In sortedMap the sorting should be based on the key, but not based on value.
+
+9)NavigableMap(I)-
+-----------------
+- It is the child interface of sortedMap.
+- if we want serveral methods for navigation purpose then we have to go 
+  for NavigableMap(i).
+  
+
+
+
